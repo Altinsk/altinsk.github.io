@@ -1,0 +1,126 @@
+.h4-cards{
+    margin: rem(20) 0 0 rem(5);
+    padding: rem(0) rem(5);
+}
+
+.p-cards {
+    margin: 0 rem(5) rem(20) rem(5);
+    padding: 0 rem(5);
+}
+
+.euro-cards {
+    margin-right: rem(8) ;
+    padding: rem(7) rem(5);
+    display: flex;
+}
+
+.cmd {
+    text-align: center;   
+}
+
+.normalflow {
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.ol-head__item__container__box {
+    transition: all 630ms ease-in-out 100ms;
+    transform-origin: left;
+    overflow: hidden;
+    background-color: $color-tertiary;
+    border-radius: 0 20px 20px 0;    
+    text-align: center;
+    display: inline-block;
+    align-self: stretch;
+
+    .fa-circle-check {
+        display: inline-block;
+        transform: rotate(-1turn);
+        transition: all 280ms ease-out 500ms;
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        cursor: pointer;
+        font-size: x-large;
+        position: relative;
+        top: 25px;
+    }
+}
+
+.resto {
+    background-color: $color-menu-bg;
+        &__bg {
+            &__frame {
+                &--image {
+                    object-fit: cover;
+                    width: 100%;
+                    max-height: rem(350);
+                }
+            }
+        }
+}
+
+.course {
+    position: relative;
+    bottom: rem(50);
+    background-color: $color-menu-bg;
+    border-radius: rem(40) rem(40) 0 0;
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 rem(30);
+        & > h1 {
+            font-style: italic;
+        }
+    }
+}
+
+.main-courses {
+    @include menu;
+}
+
+.underlined {
+    margin-bottom: rem(10);
+    @include underlined;
+}
+
+.ol-head {
+    padding: 0;
+    margin-bottom: rem(50);
+    &__item {
+            animation: list-item 300ms ease-in-out both 1, slide-up 500ms linear 1 ;
+            @for $i from 1 through 3 {
+                &--#{$i} {
+                    animation-delay: 200ms * $i;
+                }
+            }
+            @include list-style;
+            &:hover {
+                .ol-head__item__container__box {
+                        display: inline-block;
+                        width: rem(60);
+                        .fa-circle-check {
+                            transform: rotate(360deg);
+                        }
+                }
+                .overflow {
+                    @extend %overflow;
+                }
+            }
+                &__container {
+                    @include list-white;
+                    &__elements {
+                        & > p {
+                            width: 150px;
+                            @include breakpoint (medium) {
+                                width: 300px;
+                            }
+                        }
+                    }
+                    &__box {
+                        width: 0;
+                    }
+                }
+        }  
+   }   

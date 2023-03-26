@@ -1,0 +1,45 @@
+.header {
+    animation: slid-in 2000ms linear 1 forwards;
+    &__box {
+       padding: rem(20);
+       &__logo {
+        display: block;
+        margin-inline: auto;
+        height: rem(35);  
+            @include breakpoint (medium) {
+                height: rem(40);
+            }
+            @include breakpoint (large) {
+                height: rem(50);
+            }
+        }
+    }
+}
+
+.header-menu {
+    &__box {
+        padding: rem(20);
+        display: grid;
+        grid-template-columns: 10px 1fr;
+        align-items: center;
+        @include breakpoint (medium) {
+            height: rem(15);
+            margin-bottom: rem(30);
+        }
+        @include breakpoint (large) {
+            height: rem(25);
+            margin-bottom: rem(40);
+        }
+        &__logo {
+        display: block;
+        margin-inline: auto;
+        height: rem(35);  
+            @include breakpoint (medium) {
+                height: rem(40);
+            }
+            @include breakpoint (large) {
+                height: rem(50);
+            }
+        }
+    }
+}

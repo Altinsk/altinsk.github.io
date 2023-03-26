@@ -1,0 +1,25 @@
+.footer {
+    background-color: $color-footer-bg;
+    color: $color-white;
+    padding: rem(20);
+    animation: slid-in 2000ms linear 1 forwards;
+    &__title {
+        margin-bottom: rem(20);
+    }
+    &__elements {
+        @include breakpoint (medium) {
+            @include footer-icons-lg;
+        }
+    }
+    &__prop {
+        @include footer-icons-sm;
+        gap: rem(5);
+    }
+    &__part {
+        @include footer-icons-sm;
+    }
+}
+
+.adjust-margins {
+    margin: rem(5) rem(5);
+}
