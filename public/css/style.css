@@ -165,6 +165,10 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: baseline; }
+  .footer__email {
+    text-decoration: none; }
+    .footer__email > h5 {
+      color: #fff; }
 
 .adjust-margins {
   margin: 0.3125rem 0.3125rem; }
@@ -484,6 +488,7 @@ p {
   left: 0;
   width: 100vw;
   height: 100vh;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
